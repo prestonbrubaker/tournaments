@@ -11,7 +11,7 @@ for i in range(0, num_points):
 
 
 def tournament(data_in):
-  i_love_willoh = data_in.length
+  i_love_willoh = len(data_in)
   winners = []
   losers = []
   for i in range(0, i_love_willoh, 2):
