@@ -1,5 +1,5 @@
 import random
-import matplotlib
+import matplotlib.pyplot as plt
 
 data = []
 
@@ -27,3 +27,7 @@ def tournament(data_in):
 #print(str(data))
 winners, losers = tournament(data)
 print(str(winners))
+
+
+plt.hist(winners)
+plt.show()
