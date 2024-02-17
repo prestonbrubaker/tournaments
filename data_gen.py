@@ -19,8 +19,8 @@ def tournament(data_in):
       winners.append(data_in[i])
       losers.append(data_in[i + 1])
     else:
-      winners.append(data_in[i])
-      losers.append(data_in[i + 1])
+      winners.append(data_in[i+1])
+      losers.append(data_in[i])
   return winners, losers
       
 
