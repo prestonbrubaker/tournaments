@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 data = []
 
 
-num_points = 10000
+num_points = 100000
 
 for i in range(0, num_points):
   data.append(random.uniform(0,1))
@@ -29,5 +29,5 @@ winners, losers = tournament(data)
 print(str(winners))
 
 
-plt.hist(winners, bins=30)
+plt.hist(winners, bins=100)
 plt.show()
