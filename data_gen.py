@@ -29,5 +29,5 @@ winners, losers = tournament(data)
 print(str(winners))
 
 
-plt.hist(winners)
+plt.hist(winners, bins=30)
 plt.show()
