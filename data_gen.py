@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 data = []
 
 
-num_points = 100
+num_points = 10000
 
 for i in range(0, num_points):
   data.append(random.uniform(0,1))
