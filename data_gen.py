@@ -26,7 +26,9 @@ def tournament(data_in):
 
 #print(str(data))
 winners, losers = tournament(data)
-winners_w1l0, losers_w1l0 = tournament(winners)
+winners_w2l0, losers_w1l1 = tournament(winners)
 
-plt.hist(winners_w1l0, bins=100)
+winners_w3l0, losers_w2l1 = tournament(winners_w2l0)
+
+plt.hist(winners_w2l1, bins=100)
 plt.show()
