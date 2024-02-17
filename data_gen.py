@@ -30,5 +30,5 @@ winners_w2l0, losers_w1l1 = tournament(winners)
 
 winners_w3l0, losers_w2l1 = tournament(winners_w2l0)
 
-plt.hist(winners_w2l1, bins=100)
+plt.hist(losers_w2l1, bins=100)
 plt.show()
