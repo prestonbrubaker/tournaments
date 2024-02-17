@@ -24,6 +24,6 @@ def tournament(data_in):
   return winners, losers
       
 
-print(str(data))
+#print(str(data))
 winners, losers = tournament(data)
 print(str(winners))
