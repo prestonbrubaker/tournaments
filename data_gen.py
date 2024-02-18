@@ -5,7 +5,7 @@ import numpy as np
 data = []
 
 
-num_points = 1000000000
+num_points = 100000000
 bin_C = 100
 
 for i in range(0, num_points):
@@ -62,7 +62,7 @@ def calculate_shannon_entropy(hist):
 
 
 # Generate the PDF (as a histogram) from the 'losers' data
-hist = generate_pdf(winners_w3l0, bins=bin_C)
+hist = generate_pdf(winners, bins=bin_C)
 
 # The expectation value function also needs to be adjusted to work directly with the histogram.
 # Since the original function is expecting bin midpoints and probabilities, let's adjust it accordingly.
