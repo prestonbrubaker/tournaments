@@ -1,5 +1,6 @@
 import random
 import matplotlib.pyplot as plt
+import numpy as np
 
 data = []
 
@@ -32,7 +33,7 @@ winners_w2l0, losers_w1l1 = tournament(winners)
 winners_w3l0, losers_w2l1 = tournament(winners_w2l0)
 
 plt.hist(losers, bins=bin_C, density=True)
-plt.show()
+#plt.show()
 
 def generate_pdf(data, bins=100):
     """
