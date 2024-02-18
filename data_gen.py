@@ -5,8 +5,8 @@ import numpy as np
 data = []
 
 
-num_points = 1000000
-bin_C = 100
+num_points = 10000000
+bin_C = 1000
 
 for i in range(0, num_points):
   data.append(random.uniform(0,1))
