@@ -6,7 +6,7 @@ data = []
 
 
 num_points = 10000000
-bin_C = 10000
+bin_C = 1000
 
 for i in range(0, num_points):
   data.append(random.uniform(0,1))
@@ -62,7 +62,7 @@ def calculate_shannon_entropy(hist):
 
 
 # Generate the PDF (as a histogram) from the 'losers' data
-hist = generate_pdf(winners_w3l0, bins=bin_C)
+hist = generate_pdf(losers_w2l1, bins=bin_C)
 
 # The expectation value function also needs to be adjusted to work directly with the histogram.
 # Since the original function is expecting bin midpoints and probabilities, let's adjust it accordingly.
