@@ -43,7 +43,9 @@ def generate_pdf(data, bins=100):
     :param bins: Number of bins for the histogram.
     :return: Probability density for each bin.
     """
-    hist, _ = np.histogram(data, bins=bins, density=True)
+    hist, bin_edges = np.histogram(data, bins=bins)
+    # Manually normalize the histogram to make the area under the histogram equal to 1
+    hist = hist / np.sum(hist) / (bin_edges[1] - bin_edges[0])
     return hist
 
 # Re-define calculate_shannon_entropy function to use histogram directly
