@@ -35,14 +35,7 @@ winners_w3l0, losers_w2l1 = tournament(winners_w2l0)
 #plt.hist(losers, bins=bin_C, density=True)
 #plt.show()
 
-def generate_pdf(data, bins=100):
-    """
-    Generates a discrete probability density function (PDF) from a list of data, only returning the histogram.
-
-    :param data: List of data points.
-    :param bins: Number of bins for the histogram.
-    :return: Probability density for each bin.
-    """
+def generate_pdf(data, bins=bin_C):
     hist, bin_edges = np.histogram(data, bins=bins)
     # Manually normalize the histogram to make the area under the histogram equal to 1
     hist = hist / np.sum(hist) / (bin_edges[1] - bin_edges[0])
@@ -50,12 +43,6 @@ def generate_pdf(data, bins=100):
 
 # Re-define calculate_shannon_entropy function to use histogram directly
 def calculate_shannon_entropy(hist):
-    """
-    Calculates the Shannon entropy from a histogram in bits.
-
-    :param hist: Histogram representing the probability density of each bin.
-    :return: Shannon entropy in bits.
-    """
     probabilities = np.where(hist > 0, hist, np.finfo(float).eps)
     shannon_entropy = -np.sum(probabilities * np.log2(probabilities) * (1 / len(hist)))
     return shannon_entropy
@@ -67,13 +54,6 @@ hist = generate_pdf(winners, bins=bin_C)
 # The expectation value function also needs to be adjusted to work directly with the histogram.
 # Since the original function is expecting bin midpoints and probabilities, let's adjust it accordingly.
 def calculate_expectation_value(hist, data_range=(0, 1)):
-    """
-    Calculates the expectation value from a histogram, assuming a uniform distribution of bin midpoints.
-
-    :param hist: Histogram representing the probability density of each bin.
-    :param data_range: Tuple indicating the min and max values of the data range.
-    :return: Expectation value.
-    """
     bins = len(hist)
     bin_edges = np.linspace(data_range[0], data_range[1], bins+1)
     bin_midpoints = (bin_edges[:-1] + bin_edges[1:]) / 2
