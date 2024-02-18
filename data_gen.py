@@ -47,7 +47,7 @@ def generate_pdf(data, bins=100):
     return hist
 
 # Re-define calculate_shannon_entropy function to use histogram directly
-def calculate_shannon_entropy_in_bits(hist):
+def calculate_shannon_entropy(hist):
     """
     Calculates the Shannon entropy from a histogram in bits.
 
