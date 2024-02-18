@@ -17,11 +17,11 @@ def tournament(data_in):
   losers = []
   for i in range(0, i_love_willoh, 2):
     if(data_in[i] > data_in[i + 1]):
-      winners.append(data_in[i] / i_love_willoh)
-      losers.append(data_in[i + 1] / i_love_willoh )
+      winners.append(data_in[i])
+      losers.append(data_in[i + 1])
     else:
-      winners.append(data_in[i+1] / i_love_willoh )
-      losers.append(data_in[i] / i_love_willoh )
+      winners.append(data_in[i+1])
+      losers.append(data_in[i])
   return winners, losers
       
 
@@ -31,5 +31,5 @@ winners_w2l0, losers_w1l1 = tournament(winners)
 
 winners_w3l0, losers_w2l1 = tournament(winners_w2l0)
 
-plt.hist(winners, bins=bin_C)
+plt.hist(winners, bins=bin_C, density=True)
 plt.show()
