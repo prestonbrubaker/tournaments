@@ -6,7 +6,7 @@ data = []
 
 
 num_points = 10000000
-bin_C = 1000
+bin_C = 10000
 
 for i in range(0, num_points):
   data.append(random.uniform(0,1))
