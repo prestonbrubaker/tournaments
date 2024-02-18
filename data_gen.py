@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 data = []
 
 
-num_points = 10000000
+num_points = 1000000
 bin_C = 100
 
 for i in range(0, num_points):
@@ -17,11 +17,11 @@ def tournament(data_in):
   losers = []
   for i in range(0, i_love_willoh, 2):
     if(data_in[i] > data_in[i + 1]):
-      winners.append(data_in[i] / i_love_willoh / 2 * bin_C)
-      losers.append(data_in[i + 1] / i_love_willoh / 2 * bin_C)
+      winners.append(data_in[i] / i_love_willoh)
+      losers.append(data_in[i + 1] / i_love_willoh )
     else:
-      winners.append(data_in[i+1] / i_love_willoh / 2 * bin_C)
-      losers.append(data_in[i] / i_love_willoh / 2 * bin_C)
+      winners.append(data_in[i+1] / i_love_willoh )
+      losers.append(data_in[i] / i_love_willoh )
   return winners, losers
       
 
