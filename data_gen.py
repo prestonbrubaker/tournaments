@@ -32,7 +32,7 @@ winners_w2l0, losers_w1l1 = tournament(winners)
 
 winners_w3l0, losers_w2l1 = tournament(winners_w2l0)
 
-plt.hist(losers, bins=bin_C, density=True)
+#plt.hist(losers, bins=bin_C, density=True)
 #plt.show()
 
 def generate_pdf(data, bins=100):
@@ -60,7 +60,7 @@ def calculate_shannon_entropy(hist):
 
 
 # Generate the PDF (as a histogram) from the 'losers' data
-hist = generate_pdf(winners, bins=bin_C)
+hist = generate_pdf(losers, bins=bin_C)
 
 # The expectation value function also needs to be adjusted to work directly with the histogram.
 # Since the original function is expecting bin midpoints and probabilities, let's adjust it accordingly.
