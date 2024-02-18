@@ -75,7 +75,7 @@ def calculate_expectation_value(hist, data_range=(0, 1)):
     bins = len(hist)
     bin_edges = np.linspace(data_range[0], data_range[1], bins+1)
     bin_midpoints = (bin_edges[:-1] + bin_edges[1:]) / 2
-    dx = bin_midpoints[1] - bin_midpoints[0]  # Assuming evenly spaced bins
+    dx = (data_range[1] - data_range[0]) / bins  # Correctly calculating the bin width
     expectation_value = np.sum(bin_midpoints * hist * dx)
     return expectation_value
 
